@@ -7,6 +7,8 @@ var topics = ["Chris Cole", "Shane O'neill", "Mike Mo Capaldi", "Nyjah Juston", 
 
 
 function initialButtons(){
+    $("#button-section").empty();
+
     for (var i=0; i < topics.length ; i++){
         var newBtn = $("<button>");
         newBtn.addClass("btn btn-success initial-buttons");
@@ -66,8 +68,15 @@ else{
 
 };
 
-$("#form-section").on("click", function(){
+$("#form-section").on("click", function(event){
+// alert("hey it's woriing")
+event.preventDefault();
 
+var userSearch = $("#user-input").val();
+console.log(userSearch);
+
+topics.push(userSearch);
+initialButtons();
 });
 
 
