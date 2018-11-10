@@ -1,0 +1,9 @@
+/* spacing between search buttons */
+.initial-buttons {
+    margin: .5%;
+}
+
+/* soft background color */
+body {
+    background-color: beige;
+}
